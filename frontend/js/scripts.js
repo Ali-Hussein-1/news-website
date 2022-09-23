@@ -6,9 +6,10 @@ $(document).ready(() => {
       success: (json) => {
         let data = JSON.parse(json);
         console.log(data);
-        let text = document.getElementById('title');
-        let title = document.getElementById('text')
-
+        let text = document.getElementById('text');
+        let title = document.getElementById('title');
+        text.value = data.text;
+        title.value = data.title;
     }
 
       })
