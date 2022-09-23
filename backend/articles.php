@@ -6,7 +6,7 @@ header('Access-Control-Allow-Headers: Origin, Content-Type, Accept, Authorizatio
 
 include("connections.php");
 
-$id = $_POST["id"];
+$id = $_POST['id'];
 
 $query = $mysqli->prepare("SELECT text, img , title , date FROM articles WHERE articles.id = ?");
 $query->bind_param("i", $id);
